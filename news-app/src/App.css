@@ -54,8 +54,8 @@ body {
 }
 
 .ArticleImg {
-  width: 120px;
-  height: 80px;
+  width: 160px;
+  height: 100px;
   object-fit: cover;
   flex-shrink: 0;
 }

@@ -4,3 +4,10 @@
   padding-top: 8px;
 
 }
+
+@media (max-width: 500px) {
+  .name{
+    width: 100%;
+  }
+
+}
