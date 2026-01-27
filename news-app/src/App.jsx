@@ -12,7 +12,7 @@ function App() {
 
 
 const URL = `https://api.weatherapi.com/v1/current.json?key=${KEYONE}&q=03755`;
-const URLTWO = `https://gnews.io/api/v4/top-headlines?category=business&lang=en&country=us&apikey=${KEYTWO}`;
+const URLTWO = `https://newsdata.io/api/1/latest?apikey=${KEYTWO}&country=us&category=technology&language=en&image=1`;
 
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const URLTWO = `https://gnews.io/api/v4/top-headlines?category=business&lang=en&
 
     fetch(URLTWO)
       .then(res => res.json())
-      .then(json => setArticles(json.articles || []))
+      .then(json => setArticles(json.results || []))
       .catch(err => console.log(err));
   }, []);
 
@@ -40,17 +40,16 @@ const URLTWO = `https://gnews.io/api/v4/top-headlines?category=business&lang=en&
           <a 
             key={i} 
             className="Article" 
-            href={article.url} 
+            href={article.link} 
             target="_blank" 
             rel="noopener noreferrer"
           >
-            {article.image && (
-              <img src={article.image} alt="" className="ArticleImg" />
+            {article.image_url && (
+              <img src={article.image_url} alt="" className="ArticleImg" />
             )}
             <div className="ArticleText">
               <h2>{article.title}</h2>
               <p>{article.description}</p>
-              <span className="Source">{article.source?.name}</span>
             </div>
           </a>
         ))}

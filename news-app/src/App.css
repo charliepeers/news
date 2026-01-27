@@ -62,19 +62,17 @@ body {
   margin-bottom: 6px;
 }
 
+/* make some styling changes due to api */
 .ArticleText p {
   font-size: 0.9rem;
   color: #444;
   line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; 
 }
-
-.Source {
-  font-size: 0.75rem;
-  color: #888;
-  margin-top: 6px;
-  display: inline-block;
-}
-
 /*mobile responsiveness */
 @media (max-width: 500px) {
   body {
