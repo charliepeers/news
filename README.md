@@ -1,6 +1,6 @@
 # :newspaper: The Charlie Times #
 
-Is a minimal news app that renders US headlines alongside local Hanover weather. Built as a companion project to Dalibird to fill gaps in my learning.
+Is a minimal news app that renders US tech headlines alongside local Hanover weather. Built as a companion project to Dalibird to fill gaps in my learning.
 
 Live site:
 
@@ -18,7 +18,7 @@ Mobile responsiveness. Dalibird's layout worked on desktop. I hadn't tested or b
 Here are a couple questions you may be asking yourself:
 
 Why two APIs? 
-I wanted practice parsing different JSON structures. WeatherAPI returns nested objects (json.current.temp_f). NewsAPI returns an array (json.articles). Handling both forced me to understand how APIs structure their responses differently.
+I wanted practice parsing different JSON structures. WeatherAPI returns nested objects (json.current.temp_f). NewsData returns an array (json.articles). Handling both forced me to understand how APIs structure their responses differently.
 
 Why no backend? 
 Intentional. Dalibird already taught me Express routing. Here, I wanted to isolate frontend skills: useEffect for data fetching, useState for storing responses, and .map() for rendering lists.
@@ -30,7 +30,7 @@ Why this CSS approach?
 I kept styling simple to practice responsive design fundamentals: @media queries, flex-direction changes, and fluid image sizing.
 
 ### What I Learned ###
-Reading documentation matters. WeatherAPI and NewsAPI have different authentication methods, rate limits, and response formats. I spent time in both docs before writing code. This was slower than Googling examples, but I understood the APIs better.
+Reading documentation matters. WeatherAPI and NewsData have different authentication methods, rate limits, and response formats. I spent time in both docs before writing code. This was slower than Googling examples, but I understood the APIs better.
 
 useEffect dependencies are tricky. I initially forgot the empty dependency array [], which caused infinite re fetching. Small mistake but it taught me how React's render cycle works.
 
@@ -49,8 +49,10 @@ npm run dev
 ### How I would Improve This Project ###
 As of now errors just log to the console. I'd add user facing error states so users actually know when something breaks.
 
-NewsAPI has rate limits. I'd cache responses so the app doesn't hit the API on every refresh.
+NewsData has rate limits. I'd cache responses so the app doesn't hit the API on every refresh.
 
 The page is blank while data fetches. A spinner would make the wait feel shorter.
+
+Note: The quality of these articles is limited by the constraints of the free API tier. I prioritized the learning experience over the cost of a more expensive API.
 
 ## Happy reading! ##
