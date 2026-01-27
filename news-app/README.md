@@ -4,7 +4,7 @@ Is a minimal news app that renders US headlines alongside local Hanover weather.
 
 Live site:
 
-##Why I built The Charlie Times##
+###Why I built The Charlie Times###
 
 After two weeks building Dalibird, I noticed gaps in my skills. Dalibird taught me backend routing, authentication, and component architecture, but I hadn't practiced:
 
@@ -14,7 +14,7 @@ Fetching data on the frontend. Dalibird's data came from my Express server. I wa
 
 Mobile responsiveness. Dalibird's layout worked on desktop. I hadn't tested or built for smaller screens.
 
-##Technical Decisions##
+###Technical Decisions###
 Here are a couple questions you may be asking yourself:
 
 Why two APIs? 
@@ -29,11 +29,28 @@ API keys shouldn't be hardcoded. I used Vite's import.meta.env to keep keys out 
 Why this CSS approach? 
 I kept styling simple to practice responsive design fundamentals: @media queries, flex-direction changes, and fluid image sizing.
 
-##What I Learned##
+###What I Learned###
 Reading documentation matters. WeatherAPI and NewsAPI have different authentication methods, rate limits, and response formats. I spent time in both docs before writing code. This was slower than Googling examples, but I understood the APIs better.
 
 useEffect dependencies are tricky. I initially forgot the empty dependency array [], which caused infinite re fetching. Small mistake but it taught me how React's render cycle works.
 
 Mobile-first would have been easier. I built the desktop layout first, then added media queries for mobile. Next time I'd start with mobile and scale up as this ensures there is less CSS to override.
+
+###How to Run###
+npm install
+
+Create a `.env` file:
+VITE_KEYONE=weatherapi_key
+VITE_KEYTWO=newsapi_key
+
+npm run dev
+
+
+###How I would Improve This Project###
+As of now errors just log to the console. I'd add user facing error states so users actually know when something breaks.
+
+NewsAPI has rate limits. I'd cache responses so the app doesn't hit the API on every refresh.
+
+The page is blank while data fetches. A spinner would make the wait feel shorter.
 
 Happy reading!
