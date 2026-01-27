@@ -2,7 +2,7 @@
 
 Is a minimal news app that renders US tech headlines alongside local Hanover weather. Built as a companion project to Dalibird to fill gaps in my learning.
 
-Live site:
+Live site: [Visit The Charlie Times](https://charlietimes.xyz)
 
 ### Why I built The Charlie Times ###
 
@@ -45,7 +45,6 @@ VITE_KEYTWO=newsapi_key
 
 npm run dev
 
-
 ### How I would Improve This Project ###
 As of now errors just log to the console. I'd add user facing error states so users actually know when something breaks.
 
@@ -53,6 +52,6 @@ NewsData has rate limits. I'd cache responses so the app doesn't hit the API on 
 
 The page is blank while data fetches. A spinner would make the wait feel shorter.
 
-Note: The quality of these articles is limited by the constraints of the free API tier. I prioritized the learning experience over the cost of a more expensive API.
+Note: The quality of these articles isn't great because it's a free API. I believed that the learning experience was more important than paying for an expensive API.
 
 ## Happy reading! ##
