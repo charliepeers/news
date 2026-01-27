@@ -53,4 +53,4 @@ NewsAPI has rate limits. I'd cache responses so the app doesn't hit the API on e
 
 The page is blank while data fetches. A spinner would make the wait feel shorter.
 
-Happy reading!
+## Happy reading! ##

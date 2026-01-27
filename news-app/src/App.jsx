@@ -12,7 +12,8 @@ function App() {
 
 
 const URL = `https://api.weatherapi.com/v1/current.json?key=${KEYONE}&q=03755`;
-const URLTWO = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${KEYTWO}`; 
+const URLTWO = `https://gnews.io/api/v4/top-headlines?category=business&lang=en&country=us&apikey=${KEYTWO}`;
+
 
   useEffect(() => {
     fetch(URL)
@@ -43,8 +44,8 @@ const URLTWO = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${KEYTWO}
             target="_blank" 
             rel="noopener noreferrer"
           >
-            {article.urlToImage && (
-              <img src={article.urlToImage} alt="" className="ArticleImg" />
+            {article.image && (
+              <img src={article.image} alt="" className="ArticleImg" />
             )}
             <div className="ArticleText">
               <h2>{article.title}</h2>
