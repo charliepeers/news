@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import './Header.css';
+import name from '/public/name.png'
 
-export default function Header() {
+function Header() {
 
   return(
-    <div className="title">
-      The Charlie Times
-    </div>
+      <img className ="name" src={name} alt="logo" />
   )
 }
+
+export default Header

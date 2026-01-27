@@ -10,24 +10,28 @@ body {
   font-family: 'cheltenhamclassic', Georgia, serif;
   background: #fafafa;
   color: #1a1a1a;
-  padding: 20px;
-  max-width: 800px;
+  max-width: 42%;
   margin: 0 auto;
 }
 
 .Header {
-  font-size: 2.5rem;
   text-align: center;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #1a1a1a;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #1a1a1a;
 }
 
-.Temp {
+.HeaderTwo {
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.Time {
   text-align: center;
   font-size: 14px;
   padding: 8px 0;
   border-bottom: 1px solid #1a1a1a;
   color: #555;
+  display: flex;
+  gap: 66%;
 }
 
 .News {
@@ -89,6 +93,6 @@ body {
   
   .ArticleImg {
     width: 100%;
-    height: 180px;
+    height: 100px;
   }
 }
