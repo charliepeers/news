@@ -87,6 +87,10 @@ body {
   .Header {
     font-size: 1.8rem;
   }
+
+  .Time{
+    gap: 42%;
+  }
   
   .Article {
     flex-direction: column;
