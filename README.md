@@ -37,13 +37,23 @@ useEffect dependencies are tricky. I initially forgot the empty dependency array
 Mobile-first would have been easier. I built the desktop layout first, then added media queries for mobile. Next time I'd start with mobile and scale up as this ensures there is less CSS to override.
 
 ### How to Run ###
-npm install
+## Setup
 
-Create a `.env` file:
+1. Install dependencies:
+```bash
+npm install
+```
+
+2. Create a `.env` file in the root directory:
+```env
 VITE_KEYONE=weatherapi_key
 VITE_KEYTWO=newsapi_key
+```
 
+3. Start the development server:
+```bash
 npm run dev
+```
 
 ### How I would Improve This Project ###
 As of now errors just log to the console. I'd add user facing error states so users actually know when something breaks.
