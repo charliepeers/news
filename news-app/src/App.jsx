@@ -39,10 +39,8 @@ const URLTWO = `https://newsdata.io/api/1/latest?apikey=${KEYTWO}&country=us&cat
         </div>
       </div>
       <div className="Time">
-        {prnDt} 
-        <div className = "Temp"> 
-          Hanover, NH: {temp}°F
-          </div>
+        <span>{prnDt} </span>
+        <span>Hanover, NH: {temp}°F</span>
       </div>
       <div className="News">
         {articles.map((article, i) => (
